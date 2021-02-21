@@ -1,0 +1,97 @@
+<!--pages/home/home.wxml-->
+<view class='wrapper'>
+  <view class='banner'>
+  </view>
+  <view class='rule-bar' bindtap='toRules'>
+  </view>
+  <view class='content'>
+    <block wx:for='{{moments}}' wx:for-item='moment' wx:for-index='idx' wx:key='the_moment'>
+      <view class='moment-card'>
+        <view class='avatar-part'>
+          <view class='avatar' style="background-image: url({{moment.user_id.avatar}})"></view>
+        </view>
+        <view class='content-part'>
+          <view class='nickname font-title'>{{moment.user_id.nickname}}</view>
+          <view class='text font-content'>{{moment.text}}</view>
+          <view class='photos'>
+            <block wx:if='{{moment.photos.length==1}}'>
+              <view class='one-photo' style="background-image: url('{{moment.photos[0].url}}');" bindtap='showPic' data-current='{{moment.photos[0].url}}' data-pics='{{moment.photos}}'>
+              </view>
+            </block>
+            <block wx:elif='{{moment.photos.length==4}}'>
+              <scroll-view class='four-photo'>
+                <block wx:for='{{moment.photos}}' wx:for-item='photo' wx:key='the_photo'>
+                  <view class='photo4' style="background-image: url('{{photo.url}}')" bindtap='showPic' data-current='{{photo.url}}'  data-pics='{{moment.photos}}'></view>
+                </block>
+              </scroll-view>
+            </block>
+            <block wx:else>
+              <scroll-view class='nine-photo'>
+                <block wx:for='{{moment.photos}}' wx:for-item='photo' wx:key='the_photo'>
+                  <view class='photo9' style="background-image: url('{{photo.url}}')" data-current='{{photo.url}}'  data-pics='{{moment.photos}}' ></view>
+                </block>
+              </scroll-view>
+            </block>
+          </view>
+          <view class='actions'>
+            <view class='icons'>
+              <image wx:if="{{mylikes.includes(moment.objectId)}}" src='../../images/liked.png' class="icon" bindtap='bindLike' id='{{moment.objectId}}' />
+              <image src='../../images/like.png' class="icon" bindtap='bindLike' id='{{moment.objectId}}' />
+              <image src='../../images/comment.png' class='icon' bindtap='bindComment' id='{{moment.objectId}}' />
+            </view>
+          </view>
+          <scroll-view class='likes'>
+            <image src='../../images/liked.png' class='icon-small' />
+            <block wx:for='{{likes}}' wx:for-item='like' wx:key='the_like'>
+              <block wx:if='{{like.moment_id == moment.objectId}}'>
+                <view class='font-name'>{{like.user_name}},</view>
+              </block>
+            </block>
+          </scroll-view>
+          <scroll-view class='comments'>
+            <block wx:for='{{comments}}' wx:for-item='comment' wx:key='the_comment'>
+              <block wx:if='{{comment.moment_id == moment.objectId}}'>
+                <view class='font-content comment-content' bindtap='bindReply' data-comment='{{comment}}'>
+                  <text class='font-name'>{{comment.user_name}}</text>
+                  <block wx:if='{{comment.reply_to_id}}'>
+                    <text>回复</text>
+                    <text class='font-name'>{{comment.reply_to_name}}</text>
+                  </block>
+                  <text class='font-content'>: {{comment.comment}}</text>
+                </view>
+              </block>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="comment-area {{comment ? 'show' : 'hidden' }}">
+    <form bindsubmit='bindSubmit'>
+      <view class='comment-title'>
+        <view class='font-content'>发表评论</view>
+        <view class='btns'>
+          <button class='btn-primary1' formType='submit'>发送</button>
+          <button class='btn-primary1' bindtap='bindCancel'>取消</button>
+        </view>
+      </view>
+      <view class="input">
+        <textarea name="text_input" class="weui-textarea font-content" maxlength='-1' value="{{default_input}}" placeholder="请在此输入要回复的内容" style="width:100%;height: 100rpx;border:1px solid #95d9ea;" auto-height='1' />
+      </view>
+    </form>
+  </view>
+  <view class="comment-area {{reply ? 'show' : 'hidden' }}">
+    <form bindsubmit='bindSubmitReply'>
+      <view class='comment-title'>
+        <view class='font-content'>回复{{reply_to.user_name}}</view>
+        <view class='btns'>
+          <button class='btn-primary1' formType='submit'>发送</button>
+          <button class='btn-primary1' bindtap='bindCancel'>取消</button>
+        </view>
+      </view>
+      <view class="input">
+        <textarea name="text_input" class="weui-textarea font-content" maxlength='-1' value="{{default_input}}" placeholder="请在此输入要回复的内容" style="width:100%;height: 100rpx;border:1px solid #95d9ea;" auto-height='1' />
+      </view>
+    </form>
+  </view>
+</view>

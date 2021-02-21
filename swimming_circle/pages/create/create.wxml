@@ -1,0 +1,35 @@
+<!--pages/create/create.wxml-->
+<view class='wrapper'>
+  <view class='banner'>
+  </view>
+  <view class='content'>
+    <form class='form' bindsubmit='bindSubmit'>
+      <view class="input-group row-1">
+        <view class='font-title font-primary input-tag'>说点什么</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <textarea name="text_input" value="{{default}}" class="weui-textarea font-content" maxlength='-1' placeholder="请在此输入要发布的内容" style="height: 30vh;width:100%;" bindinput='countText' />
+              <view class="weui-textarea-counter text-counter font-small">已输入{{textNumber}}个字</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='input-group'>
+        <view class='font-title font-primary input-tag'>上传照片</view>
+        <scroll-view class='photos' scroll-x>
+          <block wx:for='{{photoChoose}}' wx:for-item='photo' wx:for-index='idx' wx:key='pic'>
+              <view class='photo' style="background-image: url({{photo.url}});background-size: cover; background-position:center;">
+              <image src='../../images/Close.png' class='delete' bindtap='deletePhoto' id='{{idx}}' />
+              </view>
+          </block>
+            <view class="photo {{photoChoose.length==9 ? 'hidden' : 'display' }}">
+              <image class='upload' bindtap='gotoShow' src='../../images/add.png' />
+            </view>
+        </scroll-view>
+        <view class='photo-counter font-small'>{{photoChoose.length}}/9</view>
+      </view>
+      <button class='btn-primary' formType='submit'>发布</button>
+    </form>
+  </view>
+</view>

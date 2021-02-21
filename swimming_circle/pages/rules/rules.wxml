@@ -1,0 +1,118 @@
+<!--pages/rules/rules.wxml-->
+<view class='wrapper'>
+  <view class='banner'>
+  </view>
+  <view class='rewards'>
+    <view class='reward-title font-title'>9月打卡获奖公布</view>
+    <view class='reward-rank'>
+      <view class='font-content font-bold'>满足打卡次数>15次的</view>
+      <view class='ranking'>
+        <view class='user'>
+          <view class='avatar' style="background-image: url({{user1.avatar}});"></view>
+          <view class='nickname font-small'>{{user1.nickname}}</view>
+          <view class='times font-small'>打卡22次</view>
+        </view>
+        <view class='user'>
+          <view class='avatar' style="background-image: url({{user2.avatar}});"></view>
+          <view class='nickname font-small'>{{user2.nickname}}</view>
+          <view class='times font-small'>打卡18次</view>
+        </view>
+      </view>
+    </view>
+    <view class='reward-notice'>
+      <view class='font-content'>以上2位小伙伴均可获得全套装备奖励！</view>
+      <!-- <view class='user'>
+        <view class='avatar' style="background-image: url({{user1.avatar}});"></view>
+        <view class='nickname font-small'>{{user1.nickname}}</view>
+      </view> -->
+      <view class='font-small'>请获奖的泳者直接通过邮件(sue.wang1@decathlon.com)联系我们，谢谢配合！</view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='title font-title font-bold'>
+      针对个人-如何得到训练装备？
+    </view>
+    <view class='context'>
+      <text class='font-content'>· 我们可以为个人提供哪些装备？
+包括：包，手蹼、脚蹼、浮板、泳帽
+</text>
+      <scroll-view class='products' scroll-x>
+        <view class='product-card'>
+          <view class='product-pic'>
+            <image class='img' src='../../images/1.jpg' />
+            <view class='price-tag font-content font-bold'>
+              <text>149.9</text>
+            </view>
+          </view>
+          <view class='product-name'>
+            <text class='font-small'>游泳双肩包</text>
+          </view>
+        </view>
+        <view class='product-card'>
+          <view class='product-pic'>
+            <image class='img' src='../../images/2.jpg' />
+            <view class='price-tag font-content font-bold'>
+              <text>24.9</text>
+            </view>
+          </view>
+          <view class='product-name'>
+            <text class='font-small'>男士硅胶泳帽</text>
+          </view>
+        </view>
+        <view class='product-card'>
+          <view class='product-pic'>
+            <image class='img' src='../../images/3.jpg' />
+            <view class='price-tag font-content font-bold'>
+              <text>24.9</text>
+            </view>
+          </view>
+          <view class='product-name'>
+            <text class='font-small'>女士硅胶泳帽</text>
+          </view>
+        </view>
+        <view class='product-card'>
+          <view class='product-pic'>
+            <image class='img' src='../../images/4.jpg' />
+            <view class='price-tag font-content font-bold'>
+              <text>59.9</text>
+            </view>
+          </view>
+          <view class='product-name'>
+            <text class='font-small'>游泳八字板</text>
+          </view>
+        </view>
+        <view class='product-card'>
+          <view class='product-pic'>
+            <image class='img' src='../../images/5.jpg' />
+            <view class='price-tag font-content font-bold'>
+              <text>129.9</text>
+            </view>
+          </view>
+          <view class='product-name'>
+            <text class='font-small'>游泳脚蹼</text>
+          </view>
+        </view>
+        <view class='product-card'>
+          <view class='product-pic'>
+            <image class='img' src='../../images/6.jpg' />
+            <view class='price-tag font-content font-bold'>
+              <text>59.9</text>
+            </view>
+          </view>
+          <view class='product-name'>
+            <text class='font-small'>游泳手蹼</text>
+          </view>
+        </view>
+      </scroll-view>
+
+      <text class='font-content'>
+      · 作为个人，只要你坚持在此小程序中打卡，一个月中有15次以上（一天当中的只能算一次），那么就有可能获得上述的一整套价值420元的装备。
+      </text>
+      <text class='font-content'>
+      · 活动时间：2019.6.1~2019.10.1
+        每月月底结算，每月会送出2套装备。
+        获奖信息我们会在小程序中发布。
+      </text>
+    </view>
+  </view>
+</view>

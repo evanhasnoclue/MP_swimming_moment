@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button class='btn-primary btn-position' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 进入应用 </button>
+  </view>
+</view>

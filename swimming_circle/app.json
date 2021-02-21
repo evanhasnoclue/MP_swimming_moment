@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/create/create",
+    "pages/me/me",
+    "pages/rules/rules",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "湃琦游泳打卡圈",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home_black.png",
+        "selectedIconPath": "images/home_color.png",
+        "text": "到此一游"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "iconPath": "images/create_black.png",
+        "selectedIconPath": "images/create_color.png",
+        "text": "游泳打卡"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/me_black.png",
+        "selectedIconPath": "images/me_color.png",
+        "text": "我的打卡"
+      }
+    ],
+    "selectedColor": "#95d9ea"
+  },
+  "sitemapLocation": "sitemap.json"
+}
