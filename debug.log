@@ -1,0 +1,34 @@
+[0802/181231:INFO:exception_record.cc(518)] [QB]Process ID: 11196 Type: 4
+[0902/155812:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155817:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155822:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155827:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155832:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155837:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155842:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155847:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155852:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155857:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155902:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155907:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155912:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/155917:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180105:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180401:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180401:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180729:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180734:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180739:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180744:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180749:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180754:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180759:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180804:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180809:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180815:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180820:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180825:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/180830:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/181024:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[1008/180534:ERROR:shell.cc(348)] Cannot client process matching existing identity:Name: exe:content_gpu User: 505C0EE9-3013-43C0-82B0-A84F50CF8D84 Instance: content_gpu
+[1008/180534:ERROR:browser_gpu_channel_host_factory.cc(119)] Failed to launch GPU process.
